@@ -15,7 +15,17 @@ express()
         res.render("index", { persos: response.data });
       });
   })
-  .get("/about", (req, res) => {
-    res.render("about");
+  .get("/personnage:id(\\d+)", (req, res) => {
+    axios
+      .get(
+        `https://raw.githubusercontent.com/akabab/superhero-api/0.2.0/api/id/${
+          req.params.id
+        }.json`
+      )
+      .then(response => {
+        res.render("personnage", {
+          perso: response.data
+        });
+      });
   })
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
