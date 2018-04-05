@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    .row
+        .col.s12.m6
+            .card
+                .card-content.card-image
+                    img(src=`${perso.images.md}`)
+                    
+                    p=perso.biography.fullName
+                    p=perso.work.occupation
+                    p=perso.id
+                    p=perso.name
