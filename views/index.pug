@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  ul.collection
+    each perso in persos
+      a(onClick=`see(${perso.id})`)
+        li.collection-item=perso.name
