@@ -83,11 +83,11 @@ $(document).ready(function() {
   $(function() {
     typed.typed({
       strings: [
-        "Powerful.",
-        "Beautiful.",
-        "Mindful.",
-        "Humorful.",
-        "Super HEROOOES!"
+        "Tommy-croprocesseur.",
+        "Ando-scope.",
+        "Julien-synchrone.",
+        "Benjamin-cremente.",
+        "Vincent-serif"
       ],
       typeSpeed: 100,
       loop: true
