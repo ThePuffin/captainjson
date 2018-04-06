@@ -10,8 +10,10 @@ block content
                     p=`fullname : ${perso.biography.fullName}`
                     p=`name : ${perso.name}`
                     h5= "powerstats"
-                    p=`intelligence : ${perso.powerstats.intelligence}`
-                    p=`strength : ${perso.powerstats.strength}`
+                    p="intelligence : "
+                    .progress.progress-bar(role='progressbar', style=`width: ${perso.powerstats.intelligence}%;`, aria-valuenow=`${perso.powerstats.intelligence}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.intelligence}`  
+                    p=`strength :` 
+                    .progress.progress-bar(role='progressbar', style=`width: ${perso.powerstats.strength}%;`, aria-valuenow=`${perso.powerstats.strength}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.strength}`  
                     p=`speed : ${perso.powerstats.speed}`
                     p=`durability: ${perso.powerstats.durability}`
                     p=`combat : ${perso.powerstats.combat}`
@@ -27,3 +29,4 @@ block content
                     p=`first appearance : ${perso.biography.firstAppearance}`
                     h5= `Work`
                     p=`occupation : ${perso.work.occupation}`
+                    
