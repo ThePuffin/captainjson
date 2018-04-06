@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test": "node test.js"
   },
   "dependencies": {
@@ -23,10 +23,6 @@
     "type": "git",
     "url": "https://github.com/heroku/node-js-getting-started"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
+  "keywords": ["node", "heroku", "express"],
   "license": "MIT"
 }
