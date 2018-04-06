@@ -82,7 +82,13 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["Julien.", "Ando.", "Vincent.", "Benjamin.", "Tommy"],
+      strings: [
+        "Powerful.",
+        "Beautiful.",
+        "Mindful.",
+        "Humorful.",
+        "Super HEROOOES!"
+      ],
       typeSpeed: 100,
       loop: true
     });
