@@ -2,11 +2,11 @@ extends layout
 
 block content
     .row
-        .col.s12.m6
+        .col
             .card
-                .card-content.card-image
+                .s12.md-6.card-content.card-image
                     img(src=`${perso.images.md}`)
-                    
+                .s12.m6    
                     p=`fullname : ${perso.biography.fullName}`
                     p=`name : ${perso.name}`
                     h5= "powerstats"

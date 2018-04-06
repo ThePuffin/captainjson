@@ -37,12 +37,6 @@ html(lang='fr')
               a.smoothScroll(href='#header') Home
             li
               a.smoothScroll(href='#about') About
-            li
-              a.smoothScroll(href='#portfolio') Portfolio
-            li
-              a.smoothScroll(href='#journal') Blog
-            li
-              a.smoothScroll(href='#contact') Contact
     // End section navbar
     // start section header
     block header
@@ -50,12 +44,9 @@ html(lang='fr')
     // start section about us
     // end section about us
     // start section journal
-    #journal.text-left.paddsection
-      .container
-        .section-title.text-center
-          h2 Héros
-      .container
-        block content
+
+    .container
+      block content
         
     // End section journal
     // start section footer
@@ -94,5 +85,7 @@ html(lang='fr')
     // Contact Form JavaScript File
     script(src='contactform/contactform.js')
     // Template Main Javascript File
+    script(src='//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js')
     script(src='js/main.js')
     script(src='./javascripts/main.js')
+    

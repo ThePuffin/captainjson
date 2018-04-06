@@ -27,23 +27,31 @@ block header
                 a(href='#')
                   i.ion-social-dribbble
 block content
-  .journal-block
-    .row
-      each perso in persos
-        .col-lg-3.col-md-6
-          .journal-info
-            a(href=`/personnage${perso.id}`)
-              img.img-responsiveimg(src=`${perso.images.md}`)
-            .journal-txt
-              h4
-                a(href=`/personnage${perso.id}`)=perso.name
-              p.separator=`${perso.biography.fullName} alias ${perso.biography.aliases}` 
+  #journal.text-left.paddsection
+    .container
+      .section-title.text-center
+        h2 International super hero database
+    .journal-block#users
+      .row
+        .col
+          input.form-control.search(placeholder='Say my name')
+      .row.list
+        each perso in persos
+          .col-lg-3.col-md-6
+            .journal-info
+              a(href=`/personnage${perso.id}`)
+                img.img-responsiveimg(src=`${perso.images.md}`)
+              .journal-txt
+                h4
+                  a.name(href=`/personnage${perso.id}`)=perso.name
+                p.separator=`${perso.biography.fullName} alias ${perso.biography.aliases}` 
 
 
 
 
 
-              
+
+
               //- button.btn.btn-primary(type='button', data-toggle='modal', data-target='.bd-example-modal-lg') Large modal
               //-   .modal.fade.bd-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
               //-     .modal-dialog.modal-lg
