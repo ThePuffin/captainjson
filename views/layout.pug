@@ -22,6 +22,7 @@ html(lang='fr')
     link(href='css/responsive.css', rel='stylesheet')
     // Favicon
     link(rel='shortcut icon', href='images/icons/icon-72x72.png')
+    link(rel='manifest', href='/manifest.json')
   body
     // start section navbar
     nav#main-nav
@@ -91,4 +92,10 @@ html(lang='fr')
     script(src='//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js')
     script(src='js/main.js')
     script(src='./javascripts/main.js')
+    script.
+      if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+      .register('/sw.js')
+      .then(function() { console.log("Service Worker Registered"); });
+      }
     
