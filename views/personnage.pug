@@ -1,32 +1,36 @@
 extends layout
-
+block titre_hero
+    h2=`${perso.name}`
+        h4.titre_name=`Name : ${perso.biography.fullName}`
 block content
     .row
-        .col
-            .card
-                .s12.md-6.card-content.card-image
-                    img(src=`${perso.images.md}`)
-                .s12.m6    
-                    p=`fullname : ${perso.biography.fullName}`
-                    p=`name : ${perso.name}`
-                    h5= "powerstats"
-                    p="intelligence : "
-                    .progress.progress-bar(role='progressbar', style=`width: ${perso.powerstats.intelligence}%;`, aria-valuenow=`${perso.powerstats.intelligence}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.intelligence}`  
-                    p=`strength :` 
-                    .progress.progress-bar(role='progressbar', style=`width: ${perso.powerstats.strength}%;`, aria-valuenow=`${perso.powerstats.strength}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.strength}`  
-                    p=`speed : ${perso.powerstats.speed}`
-                    p=`durability: ${perso.powerstats.durability}`
-                    p=`combat : ${perso.powerstats.combat}`
-                    p=`power : ${perso.powerstats.power}`
-                    h5="appearance"
-                    p=`gender : ${perso.appearance.gender}`
-                    p=`race : ${perso.appearance.race}`
-                    p=`height : ${perso.appearance.height[1]}`
-                    p=`weight : ${perso.appearance.weight[1]}`
-                    h5="biography"
-                    p=`opponence : ${perso.biography.alterEgos}`
-                    p=`aliases : ${perso.biography.aliases}`
-                    p=`first appearance : ${perso.biography.firstAppearance}`
-                    h5= `Work`
-                    p=`occupation : ${perso.work.occupation}`
-                    
+        .col-12.col-md-6.text-center
+            img(src=`${perso.images.md}`)
+        .col-12.col-md-6
+            p.stats="intelligence : "
+            .progress.progress-bar#pb1(role='progressbar', style=`width: ${perso.powerstats.intelligence}%;`, aria-valuenow=`${perso.powerstats.intelligence}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.intelligence}`  
+            p.stats.stats=`strength :` 
+            .progress.progress-bar#pb2(role='progressbar', style=`width: ${perso.powerstats.strength}%;`, aria-valuenow=`${perso.powerstats.strength}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.strength}`  
+            p.stats=`speed : `
+            .progress.progress-bar#pb3(role='progressbar', style=`width: ${perso.powerstats.speed}%;`, aria-valuenow=`${perso.powerstats.speed}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.speed}`  
+            p.stats=`durability: `
+            .progress.progress-bar#pb4(role='progressbar', style=`width: ${perso.powerstats.durability}%;`, aria-valuenow=`${perso.powerstats.durability}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.durability}`  
+            p.stats=`combat : `
+            .progress.progress-bar#pb5(role='progressbar', style=`width: ${perso.powerstats.combat}%;`, aria-valuenow=`${perso.powerstats.combat}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.combat}`  
+            p.stats=`power : `
+            .progress.progress-bar#pb6(role='progressbar', style=`width: ${perso.powerstats.power}%;`, aria-valuenow=`${perso.powerstats.power}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.power}` 
+    .row 
+        .col-md-4.text-center
+            h5.titre_skills="Appearance"
+                p=`Gender : ${perso.appearance.gender}`
+                p=`Race : ${perso.appearance.race}`
+                p=`Height : ${perso.appearance.height[1]}`
+                p=`Weight : ${perso.appearance.weight[1]}`
+        .col-md-4.text-center
+            h5.titre_skills="Biography"
+                p=`Opponence : ${perso.biography.alterEgos}`
+                p=`Aliases : ${perso.biography.aliases}`
+                p=`First appearance : ${perso.biography.firstAppearance}`
+        .col-md-4.text-center   
+            h5.titre_skills= `Work`
+                p=`Occupation : ${perso.work.occupation}`
