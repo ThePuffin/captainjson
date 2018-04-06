@@ -2,12 +2,31 @@ extends layout
 
 block content
     .row
-        .col-4
+        .col.s12.m6
             .card
                 .card-content.card-image
                     img(src=`${perso.images.md}`)
                     
-                    p=perso.biography.fullName
-                    p=perso.work.occupation
-                    p=perso.id
-                    p=perso.name
+                    p=`fullname : ${perso.biography.fullName}`
+                    p=`name : ${perso.name}`
+                    h5= "powerstats"
+                    p="intelligence : "
+                    .progress.progress-bar(role='progressbar', style=`width: ${perso.powerstats.intelligence}%;`, aria-valuenow=`${perso.powerstats.intelligence}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.intelligence}`  
+                    p=`strength :` 
+                    .progress.progress-bar(role='progressbar', style=`width: ${perso.powerstats.strength}%;`, aria-valuenow=`${perso.powerstats.strength}`, aria-valuemin='0', aria-valuemax='100')=`${perso.powerstats.strength}`  
+                    p=`speed : ${perso.powerstats.speed}`
+                    p=`durability: ${perso.powerstats.durability}`
+                    p=`combat : ${perso.powerstats.combat}`
+                    p=`power : ${perso.powerstats.power}`
+                    h5="appearance"
+                    p=`gender : ${perso.appearance.gender}`
+                    p=`race : ${perso.appearance.race}`
+                    p=`height : ${perso.appearance.height[1]}`
+                    p=`weight : ${perso.appearance.weight[1]}`
+                    h5="biography"
+                    p=`opponence : ${perso.biography.alterEgos}`
+                    p=`aliases : ${perso.biography.aliases}`
+                    p=`first appearance : ${perso.biography.firstAppearance}`
+                    h5= `Work`
+                    p=`occupation : ${perso.work.occupation}`
+                    
