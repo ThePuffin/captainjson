@@ -152,4 +152,70 @@ $(document).ready(function() {
 
   // Call the functions
   magnifPopup();
+  
+
+  let progressBarColor1;
+  let progressBarColor2;
+  let progressBarColor3;
+  let progressBarColor4;
+  let progressBarColor5;
+  let progressBarColor6;
+  let someValueToCheck2 = $('#pb2').attr('aria-valuenow') ;
+  let someValueToCheck3 = $('#pb3').attr('aria-valuenow') ;
+  let someValueToCheck4 = $('#pb4').attr('aria-valuenow') ;
+  let someValueToCheck1 = $('#pb1').attr('aria-valuenow') ;
+  let someValueToCheck5 = $('#pb5').attr('aria-valuenow') ;
+  let someValueToCheck6 = $('#pb6').attr('aria-valuenow') ;
+
+
+  // function changeMaColor(x){
+  //   if(x >= 50){progressBarColor1 = "#008bd6"}
+  // else if (x < 50 && x >= 20){
+  //   progressBarColor1 = "#00d675"}
+  //   else {progressBarColor = "#A52A2A"};
+  // this.css('background-color', progressBarColor1);
+  // }
+
+
+  if(someValueToCheck1 >= 50){progressBarColor1 = "#008bd6"}
+  else if (someValueToCheck1 < 50 && someValueToCheck1 >= 20){
+    progressBarColor1 = "#00d675"}
+    else {progressBarColor = "#A52A2A"};
+  $("#pb1").css('background-color', progressBarColor1);
+
+  if(someValueToCheck2 >= 50){progressBarColor2 = "#008bd6"}
+  else if (someValueToCheck2 < 50 && someValueToCheck2 >= 20){
+    progressBarColor2 = "#00d675"}
+    else {progressBarColor2 = "#A52A2A"};
+  $("#pb2").css('background-color', progressBarColor2);
+
+  if(someValueToCheck3 >= 50){progressBarColor3 = "#008bd6"}
+  else if (someValueToCheck3 < 50 && someValueToCheck3 >= 20){
+    progressBarColor3 = "#00d675"}
+    else {progressBarColor3 = "#A52A2A"};
+  $("#pb3").css('background-color', progressBarColor3);
+
+  if(someValueToCheck4 >= 50){progressBarColor4 = "#008bd6"}
+  else if (someValueToCheck4 < 50 && someValueToCheck4 >= 20){
+    progressBarColor4 = "#00d675"}
+    else {progressBarColor4 = "#A52A2A"};
+  $("#pb4").css('background-color', progressBarColor4);
+
+  if(someValueToCheck5 >= 50){progressBarColor5 = "#008bd6"}
+  else if (someValueToCheck5 < 50 && someValueToCheck5 >= 20){
+    progressBarColor5 = "#00d675"}
+    else {progressBarColor5 = "#A52A2A"};
+  $("#pb5").css('background-color', progressBarColor5);
+
+  if(someValueToCheck6 >= 50){progressBarColor6 = "#008bd6"}
+  else if (someValueToCheck6 < 50 && someValueToCheck6 >= 20){
+    progressBarColor6 = "#00d675"}
+    else {progressBarColor6 = "#A52A2A"};
+  $("#pb6").css('background-color', progressBarColor6);
+
+
+  let tl = new TimelineMax({
+    paused:true
+  });
+  
 });
