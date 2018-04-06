@@ -1,5 +1,5 @@
-var cacheName = "weatherPWA-step-6-1";
-var filesToCache = [];
+var cacheName = "Heroes_Database_v0";
+var filesToCache = ["/", "/css/style.css", "/stylesheets/main.css"];
 
 self.addEventListener("install", function(e) {
   console.log("[ServiceWorker] Install");
